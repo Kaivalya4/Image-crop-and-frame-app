@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rectagle: "M250 56.25C250 25.2094 221.99 0 187.5 0H62.5C28.0104 0 0 25.2094 0 56.25V168.75C0 199.791 28.0104 225 62.5 225H187.5C221.99 225 250 199.791 250 168.75V56.25Z";
+
+    --circle: "M125 225C194.036 225 250 174.632 250 112.5C250 50.368 194.036 0 125 0C55.9644 0 0 50.368 0 112.5C0 174.632 55.9644 225 125 225Z";
+
+    --heart: "M125 34.5C92.2 -21.9625 0 -5.475 0 65.2625C0 111.825 54.3125 161.85 116.288 222.012C118.713 224.375 121.863 225.55 125 225.55C128.137 225.55 131.287 224.375 133.712 222.012C195.925 161.625 250 111.837 250 65.2625C250 -5.7125 157.55 -21.5375 125 34.5V34.5Z";
+
+    --square: "M125 0C26.75 0 0 24.075 0 112.5C0 200.925 26.5729 225 125 225C223.427 225 250 201.084 250 112.5C250 23.9156 223.25 0 125 0Z";
+
+    /* colors */
+    --color1: rgba(20, 220, 180, 1);
+    --color2: rgba(48, 51, 107, 0.5);
+    --color3: rgb(133, 170, 163);
+}
+
+body {
+    background-color: var(--color1);
+}
+
+.start-button {
+    margin-top: 1rem;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.final-display {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.pre-final-display {
+    box-shadow: 8px 8px 8px var(--color2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color3);
+    display: none;
+    margin-bottom: 1rem;
+}
+
+.heart {
+    clip-path: path(var(--heart));
+}
+
+.square {
+    clip-path: path(var(--square));
+}
+
+.circle {
+    clip-path: path(var(--circle));
+}
+
+.rectangle {
+    clip-path: path(var(--rectagle));
+}
+
+.pre-final-frame {
+    margin-bottom: 2rem;
+}
+
+.frame {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 2rem;
+}
+
+.frames {
+    max-width: 50px;
+    max-height: 50px;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.frames-none {
+    border: 1px solid black;
+    border-radius: 1rem;
+    text-align: center;
+    width: 6rem;
+    padding-top: 0.5rem;
+    cursor: pointer;
+}
